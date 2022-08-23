@@ -30,13 +30,13 @@ public class data_type {
         System.out.println(i++);     // 값이 참조된 후에 증가
         System.out.println(++i);     // 값이 참조되기 전에 증가
 
-        double j = 2.2;        // 실수인 경우 기본 자료형이 double. float로 지정한 경우 에러 발생.
+        double j = 2.2;        // 실수인 경우 기본 자료형이 double. float로 지정한 경우 에러 발생(float j = 2.2 (x)).
         float k = 2.2F;        // float로 지정하고 싶으면 F를 붙여주면 됨
         long l = 214783648L;   // 위와 마찬가지로 정수의 기본 자료형은 int type임. 따라서 범위 밖의 int 자료형을 long 타입으로 지정해주려면 L 을 명시적으로 붙여줘야함
 
         // 문자 자료형
         char x = 'x';
-        String y = "문자열";   // 방법 1 : 리터럴 표기(객체 생성 없이 고정된 값을 그대로 대입하는 방법. Primitive Type)
+        String y = "문자열";                       // 방법 1 : 리터럴 표기(객체 생성 없이 고정된 값을 그대로 대입하는 방법. Primitive Type)
         String z = new String("문자열");    // 방법 2 : 새로운 String 객체 생성. 다만 위의 방식이 더 많이쓰임 (가독성) (Reference Type)
         System.out.println(y+z);
 
