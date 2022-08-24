@@ -1,7 +1,9 @@
 package objects;
 
 class Calculator{
-    int left, right;
+    int left, right;                // 인스턴스 변수. 클래스를 통해 생성된 각 객체가 다른 값들을 가짐
+    static double PI = 3.14;        // 클래스 변수. 모든 객체가 동일한 값을 가짐
+    static int base = 0;
 
     public void setOprands(int left, int right){
         this.left = left;           // this : Calculator 클래스를 통해 만들어진 인스턴스 (c1, c2)를 가리킴
@@ -9,8 +11,8 @@ class Calculator{
     }
 
     public void sum(){
-        System.out.println(this.left + this.right);
-    }
+        System.out.println(this.left + this.right + base);
+    }    // 클래스 변수인 base는 따로 설정해주지 않는 이상 0
 
     public void avg(){
         System.out.println((this.left + this.right) / 2);
@@ -32,6 +34,8 @@ public class CalculatorDemo2 {
         c2.setOprands(20, 40);
         c2.sum();
         c2.avg();
+        c2.base = 10;   // Calculator 클래스로 생성한 객체 c2의 클래스변수인 base의 값을 바꾸자, 바꾼 값이 입력됨을 확인할 수 있음
+        c2.sum();
 
     }
 }
