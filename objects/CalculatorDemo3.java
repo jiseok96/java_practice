@@ -56,4 +56,9 @@ static 이 붙어있으면 클래스 멤버(변수, 메소드), static이 안붙
 > 인스턴스 변수: Non-static field
   클래스 변수: static field 라고 불리기도 함
 
+
+즉, 클래스가 갖게되는 성질이 class memeber(class variable, class method)
+클래스가 생성한 인스턴스가 갖게되는 값이 instance member(instance variable, instance method)
+
+
  */
