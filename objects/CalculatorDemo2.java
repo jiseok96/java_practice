@@ -40,5 +40,9 @@ public class CalculatorDemo2 {
         c2.base = 10;   // Calculator 클래스로 생성한 객체 c2의 클래스변수인 base의 값을 바꾸자, 바꾼 값이 입력됨을 확인할 수 있음
         c2.sum();
 
+        Calculator c3 = new Calculator();
+        c3.sum();
+
+        System.out.println(Calculator.PI);
     }
 }

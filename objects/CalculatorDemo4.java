@@ -11,10 +11,19 @@ CalculatorDemo2를 보자. setOprands 함수를 통해서 left, right를 설정�
  */
 
 class Calculator02 {
-    int left, right;
+    int left, right, top, down;
+    String name;
     public Calculator02(int left, int right){       // 이게 생성자. 클래스와 동일한 이름을 가짐. 기존 setOprands가 하던 일을 함
         this.left = left;                           // java는 class 가 생성될 때, 그 class랑 똑같은 이름의 메서드가 선언되도록 약속되어있음
         this.right = right;                         //
+    }
+
+    public Calculator02(int top){
+        this.top = top;
+    }
+
+    public Calculator02(String name){
+
     }
 
     public void sum(){
