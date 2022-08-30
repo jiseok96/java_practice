@@ -1,5 +1,12 @@
 package objects;
 
+
+/*
+- 클래스 변수와 인스턴스 변수에 대한 설명
+- 상속에 대한 설명
+ */
+
+
 class Calculator{
     int left, right;                // 인스턴스 변수. 클래스를 통해 생성된 각 객체가 다른 값들을 가짐
     static double PI = 3.14;        // 클래스 변수. 모든 객체가 동일한 값을 가짐
@@ -24,6 +31,22 @@ class Calculator{
 }
 
 
+// 상속
+
+class SubtractionableCalculator extends Calculator {      // extends Calculator 를 통해서 상속을 구현할 수 있음
+    public void subtract() {                              // Calculator의 기능 + 여기서 구현한 subtract 함수 사용 가능
+        System.out.println(this.left - this.right);       // 실제 사용 : public class의 main 함수의 c3에서 사용중
+    }
+}
+
+class DivisionableCalculator extends SubtractionableCalculator {
+    public void division(){
+        System.out.println(this.left/this.right);
+    }
+}
+
+
+
 public class CalculatorDemo2 {
 
     public static void main(String[] args) {
@@ -40,9 +63,17 @@ public class CalculatorDemo2 {
         c2.base = 10;   // Calculator 클래스로 생성한 객체 c2의 클래스변수인 base의 값을 바꾸자, 바꾼 값이 입력됨을 확인할 수 있음
         c2.sum();
 
-        Calculator c3 = new Calculator();
+        // 상속의 사용: SubtractionableCalculator 클래스의 사용
+        SubtractionableCalculator c3 = new SubtractionableCalculator();
+        c3.setOprands(10, 20);
         c3.sum();
+        c3.subtract();
 
-        System.out.println(Calculator.PI);
+        // 상속의 사용 2: 상속된 클래스를 당연히 또 상속할 수 있음
+        DivisionableCalculator c4 = new DivisionableCalculator();
+        c4.setOprands(30, 40);
+        c4.subtract();
+        c4.division();
+
     }
 }

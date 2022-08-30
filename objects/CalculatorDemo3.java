@@ -1,5 +1,11 @@
 package objects;
 
+
+/*
+클래스 메소드에 대한 이해
+ */
+
+
 class Calculator3{
 
     public static void sum(int left, int right){
