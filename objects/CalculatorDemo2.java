@@ -24,8 +24,9 @@ class Calculator{
         System.out.println(this.left + this.right + base);
     }    // 클래스 변수인 base는 따로 설정해주지 않는 이상 0
 
-    public void avg(){
+    public int avg(){
         System.out.println((this.left + this.right) / 2);
+        return ((this.left + this.right) / 2);
     }
 
 }
@@ -39,9 +40,33 @@ class SubtractionableCalculator extends Calculator {      // extends Calculator 
     }
 }
 
-class DivisionableCalculator extends SubtractionableCalculator {
+
+
+/*
+
+□ Overriding : 부모 클래스와 자식클래스에 동일한 메서드를 갖고있는 경우 자식클래스에 정의된 메서드를 사용함. 이것이 메서드 overriding
+
+- 조건 1 : 메서드의 이름이 같아야함
+- 조건 2 : 메소드의 매개변수가 동일해야함 (매개변수의 갯수, 매개변수의 타입이 정확히 일치해야함)
+- 조건 3 : 메소드의 리턴 타입이 동일해야함
+
+위의 조건들을 메서드의 서명(signature) 이라고 이야기함. 즉 메서드의 signature가 동일해야 overriding을 실행할 수 있음!
+메서드의 signature가 다르다면 에러 발생.
+
+ */
+
+class DivisionableCalculator extends SubtractionableCalculator {     // 이처럼 상속된 클래스를 또 상속해서 사용할 수 있음
     public void division(){
         System.out.println(this.left/this.right);
+    }
+
+    // 메서드 오버라이딩. 부모에 있는 sum() 과 동일한 메서드를 자식에서 정의해줌
+    public void sum(){
+        System.out.println("실행 결과는" + (this.left + this.right)+"입니다");
+    }
+
+    public int avg(){                     // 상위 클래스와 중복을 피하려면 다음과 같이 super를 사용하면 됨.
+        return super.avg();               // 이렇게 정의했을 경우 코드를 수정하고 싶으면 부모꺼를 바꾸면 됨
     }
 }
 
@@ -74,6 +99,7 @@ public class CalculatorDemo2 {
         c4.setOprands(30, 40);
         c4.subtract();
         c4.division();
+        c4.sum();               // 실행 시 자식클래스의 sum() 메서드가 실행됨
 
     }
 }
