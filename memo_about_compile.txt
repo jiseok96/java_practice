@@ -1,0 +1,52 @@
+ClasspathDemo.java라는 파일이 있어
+
+□ java compile 실행 
+
+cmd 창에서 
+1. cd 경로(해당 위치로 이동)
+2. javac ClasspathDemo.java 
+
+를 실행하면 ClasspathDemo.java 파일에 있는 class 2개가 컴파일되어서 .class로 2개 생성되게 됨! 
+
+* 근데 실행 시에 'javac'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는 배치 파일이 아닙니다. 오류가 발생했었음
+
+   따라서 https://orange056.tistory.com/37  주소를 참조해 문제 해결 
+   - 환경변수 > 시스템 변수의 값에 자바 jdk의 경로를 입력. 변수 이름은 JAVA_HOME으로 설정함  
+   - 시스템 변수의 Path에 %JAVA_HOME%\bin 입력 이후 맨 위로 올려줌. 
+
+
+□ compile된 파일 실행 
+
+java ClasspathDemo2 
+
+□ 클래스 패스 
+
+근데 class 파일 하나가 다른 폴더에 있어. 그럴 때 -classpath 라는 옵션을 통해 실행할 class의 경로들을 확인하는 함수임 
+
+실행 ex)   java -classpath ".:lib" ClasspathDemo2
+
+- . : 현재위치
+- : : 경로들을 연결할 떄 사용
+- .:lib : 현재 위치를 먼저 보고 없으면 lib이라는 하위폴더도 본다는 뜻 
+
+
+□ 환경변수 
+
+매번 -classpath로 지정해주지 않고 아예 환경변수로 설정해놓으면 편함 
+자바는 클래스패스로 환경변수 CLASSPATH를 사용하기 때문에 여기에 지정해주면됨 
+
+새로 만들기 > 변수이름 : CLASSPATH, 변수 값: .lib 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
