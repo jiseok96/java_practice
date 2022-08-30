@@ -20,9 +20,9 @@ class Calculator02 {
 
     public Calculator02(int top){
         this.top = top;
-    }
+    }       // 생성자는 이름이 동일하더라도, 받아오는 매개변수가 다르다면 상관없음.
 
-    public Calculator02(String name){
+    public Calculator02(String name){                      // Calculator 객체 생성 시 값을 하나만 줬을 때, 준 값이 int 면 위에꺼, String이면 아래꺼를 실행.
 
     }
 

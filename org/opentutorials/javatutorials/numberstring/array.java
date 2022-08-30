@@ -71,8 +71,8 @@ public class array {
         String leap;
     }
 
-    public static void outputNumber(){
-        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    public static void outputNumber(){                              // 위와 아래 동일한 이름의 outputNumber 메서드이지만,
+        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};            // 입력 값의 유무에 따라 다른 함수가 호출됨.
 
         for (int i = 0; i < numbers.length; i++ ){
             if (numbers[i] / 2 == 0){
@@ -87,8 +87,6 @@ public class array {
                 System.out.println("기타" + numbers[i]);
             }
         }
-
-
     }
 
     public static void outputNumber(int j) {
