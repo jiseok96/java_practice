@@ -18,10 +18,15 @@ public class OverloadingDemo2 extends OverloadingDemo{
         System.out.println("sub class: void");
     }
 
+
+
     // overriding: 부모 클래스와 동일한 이름의 메서드
     void A (){
         System.out.println("sub class: void A ()");
     }
+
+
+
 
     public static void main(String[] args){
         OverloadingDemo2 od2 = new OverloadingDemo2();

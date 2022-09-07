@@ -1,4 +1,4 @@
-package reference;
+package JavaStudyFourth.reference;
 
 /*
 
@@ -9,7 +9,7 @@ package reference;
     b 라는 변수에는 a가 가진 값 1을 복제해서 넣어
     b 를 2로 바꾸면 b=2, a=1
 
-□ 참조 자료형(reference Type): 참조
+□ 참조 자료형(JavaStudyFourth.reference Type): 참조
 
     new A를 하면 인스턴스 A가 컴퓨터 어딘가에 만들어져
     a 라는 변수는 인스턴스 A의 위치에 대한 정보를 가져

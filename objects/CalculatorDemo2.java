@@ -65,10 +65,16 @@ class DivisionableCalculator extends SubtractionableCalculator {     // 이처�
         System.out.println("실행 결과는" + (this.left + this.right)+"입니다");
     }
 
-    public int avg(){                     // 상위 클래스와 중복을 피하려면 다음과 같이 super를 사용하면 됨.
-        return super.avg();               // 이렇게 정의했을 경우 코드를 수정하고 싶으면 부모꺼를 바꾸면 됨
-    }
+//    public int avg(){
+//        System.out.println((this.left + this.right) / 2);
+//        return ((this.left + this.right) / 2);
+//
+//        // 상위 클래스와 중복을 피하려면 다음과 같이 super를 사용하면 됨.
+//        //return super.avg();               // 이렇게 정의했을 경우 코드를 수정하고 싶으면 부모꺼를 바꾸면 됨
+//    }
 }
+
+
 
 
 
@@ -100,6 +106,6 @@ public class CalculatorDemo2 {
         c4.subtract();
         c4.division();
         c4.sum();               // 실행 시 자식클래스의 sum() 메서드가 실행됨
-
+        c4.avg();
     }
 }

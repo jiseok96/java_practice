@@ -1,4 +1,4 @@
-package constatntEnum;
+package JavaStudyFourth.constatntEnum;
 
 public class ConstantDemo {
     public static void main(String[] args){

@@ -1,4 +1,4 @@
-package reference;
+package JavaStudyFourth.reference;
 
 public class ReferenceParameterDemo {
 
